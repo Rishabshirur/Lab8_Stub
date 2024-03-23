@@ -1,0 +1,28 @@
+{{!
+
+This page will respond with a valid HTML document. The title of the document should be "Venue Finder". You should have
+the title set as the <title> element of the HTML document and as an h1 in your document.
+
+    Your page should reference a CSS file, /public/css/main-styles.css; this file should have at least 5 rulesets that
+    apply
+    to this page; these 5 rules can also apply to elements across all of your pages, or be unique to this page.
+
+    You should have a main element, and inside of the main element have a p element with a brief (2-3 sentence
+    description) of what your website does.
+
+    Also inside the main element, you will have a form; this form will POST to the /searchvenues route. This form will
+    have an input and a label; the label should properly reference the same id as the input using the for attribute. You
+    should also have an input with a type of submit that submits the form. The input in your form should have a name of
+    searchVenueTerm.
+
+    }}
+<h1>Venue Finder</h1>
+<main>
+    <p> Welcome to VenueFinder!!!<br/>
+    Search for Venues using the search bar below and<br/> view information of a particular venue<br/>You can also access the link provided in venue details to get more info or purchase tickets</p>
+    <form action="/searchvenues" id="search_form" method="POST">
+        <label for="venue_search">Enter venue:</label>
+        <input type="text" name="searchVenueTerm" id="venue_search" placeholder="Enter venue"><br><br>
+        <input type="submit" form="search_form" value="Search">
+    </form>
+</main>
